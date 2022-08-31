@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Hello World</string>
+    <string name="textinputnama">Masukkan nama Anda</string>
+    <string name="toppings">TOPPINGS</string>
+    <string name="whipedcream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="buttonminus">-</string>
+    <string name="buttonplus">+</string>
+    <string name="textviewquantity">0</string>
+    <string name="buttonorder">Order</string>
+    <string name="totalbayar">Total Bayar</string>
+    <string name="textviewtotalbayar">Rp 0</string>
+    <string name="textviewhargawc">Rp 5.000</string>
+    <string name="textviewhargacho">Rp 7.500</string>
 </resources>
