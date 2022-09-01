@@ -18,7 +18,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.recyclerView.adapter = MainAdapter(viewModel.data)
+        val adapter = MainAdapter()
+        binding.recyclerView.adapter = adapter
         binding.recyclerView.setHasFixedSize(true)
+
+        viewModel.getData().observe(this) {
+            adapter.updateData(it)
+        }
     }
 }
