@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.ahmadhartaji.helloworld.databinding.ListItemBinding
+import com.squareup.picasso.Picasso
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
@@ -13,7 +14,8 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     class ViewHolder(private val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(hewan: Hewan) = with(binding) {
-            imageView.setImageResource(hewan.gambarResId)
+            Picasso.get().load(HewanApi.getHewanUrl(hewan.imageId)).into(imageView)
+
             textViewNama.text = hewan.nama
             textViewLatin.text = hewan.namaLatin
 
